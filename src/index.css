@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-brand-pink: #e91e63;
+  --color-brand-purple: #9c27b0;
+  --color-brand-blue: #2196f3;
+  --color-brand-cyan: #00bcd4;
+  --color-brand-orange: #ff9800;
+  --color-brand-yellow: #ffeb3b;
+  --color-brand-green: #4caf50;
+  
+  --color-bg-main: #f8f9fd;
+  --color-card-shadow: rgba(145, 158, 171, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-slate-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .card-shadow {
+    box-shadow: 0 0 2px 0 var(--color-card-shadow), 0 12px 24px -4px var(--color-card-shadow);
+  }
+  
+  .gradient-pink {
+    @apply bg-gradient-to-r from-[#ff4b91] to-[#ff7676];
+  }
+  
+  .gradient-purple {
+    @apply bg-gradient-to-r from-[#a16eff] to-[#7158e2];
+  }
+  
+  .gradient-blue {
+    @apply bg-gradient-to-r from-[#4facfe] to-[#00f2fe];
+  }
+  
+  .gradient-orange {
+    @apply bg-gradient-to-r from-[#f83600] to-[#f9d423];
+  }
+}
+
